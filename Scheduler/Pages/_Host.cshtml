@@ -4,5 +4,8 @@
 @{
     Layout = "_Layout";
 }
-
-<component type="typeof(App)" render-mode="ServerPrerendered" />
+@*
+    Changed from ServerPrerendered to Server to make CustomAuthenticationStateProvider.GetAuthenticationStateAsync works 
+    And because NOtAuthorized content is display before Authorized which make DOM content to blink to user (ugly!)
+*@
+<component type="typeof(App)" render-mode="Server" />
